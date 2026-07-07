@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Clash Display", "Avenir Next", "Helvetica Neue", sans-serif;
+  --font-sans: "Switzer", "Helvetica Neue", Arial, sans-serif;
+
+  /* White ground scale — black / white / gold, per the logo */
+  --color-paper: #ffffff;
+  --color-paper-2: #f6f4ef;
+  --color-line: #e7e3da;
+
+  /* Ink scale — dark on light (ink-950 = the logo's black A).
+     ink-400 is held at AA on white for small muted labels. */
+  --color-ink-950: #14141a;
+  --color-ink-800: #33323a;
+  --color-ink-600: #5c5a63;
+  --color-ink-400: #6f6d77;
+
+  /* Single accent: gold. Both tints clear AA as small text on white;
+     the bright champagne lives in the CTA/logo gradients, not in type. */
+  --color-accent: #8f6a15;
+  --color-accent-soft: #97701a;
+
+  --tracking-tightest: -0.02em;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply font-sans text-ink-950 antialiased;
+    /* Ground: white with a whisper of warmth up top, never a flat slab */
+    background: radial-gradient(120% 80% at 50% 0%, #ffffff 0%, #faf8f3 100%)
+      fixed var(--color-paper);
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+}
+
+@layer utilities {
+  /* Editorial index labels: wide-tracked caps — the wordmark's own voice
+     at small size (docs/BRAND-SYSTEM.md §3.3). */
+  .label-mono {
+    @apply font-sans text-[0.6875rem] font-medium tracking-[0.22em] uppercase;
+    font-feature-settings: "tnum" 1;
+  }
+
+  /* Surface craft — restraint on white: hairline borders, soft lift, gold on
+     hover. Gold stays the only color; everything else is black and paper. */
+
+  /* Raised card: white with a whisper of top highlight and a soft shadow. */
+  .card-metal {
+    background: #ffffff;
+    border: 1px solid var(--color-line);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      0 1px 2px rgba(20, 20, 26, 0.04);
+    border-radius: 0.5rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .card-metal:hover {
+    border-color: rgba(143, 106, 21, 0.4);
+    box-shadow: 0 6px 20px rgba(20, 20, 26, 0.07);
+  }
+
+  /* Machined groove: hairline plus a light catch beneath it. */
+  .divider-groove {
+    border-top: 1px solid var(--color-line);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  /* Gold primary CTA — hero + close only. Gradient fill, dark legend. */
+  .btn-primary {
+    background: linear-gradient(160deg, #e9ce93 0%, #d4a84b 55%, #b58a2e 100%);
+    color: #14141a;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.45),
+      0 2px 8px rgba(143, 106, 21, 0.18);
+    border-radius: 9999px;
+    transition: filter 0.3s, box-shadow 0.3s;
+  }
+  .btn-primary:hover {
+    filter: brightness(1.04);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.45),
+      0 4px 14px rgba(143, 106, 21, 0.26);
+  }
+
+  /* Trust-band marquee: a slow, seamless drift of credential chips. Paused
+     for reduced-motion users via the .no-motion guard below. */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 42s linear infinite;
+  }
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+  }
+
+  /* One photographic treatment, site-wide: high-contrast monochrome seated
+     into the black, warm champagne highlight bias — gold arrives as light
+     (docs/BRAND-SYSTEM.md §6). */
+  .duotone {
+    position: relative;
+    overflow: hidden;
+  }
+  .duotone > img {
+    display: block;
+    filter: grayscale(100%) contrast(1.05) brightness(1.02);
+  }
+  .duotone::before {
+    /* seat the photo into the white ground */
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 0.3) 100%);
+  }
+  .duotone::after {
+    /* warm gold bias, multiplied into the light so it reads on paper */
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: #b58a2e;
+    mix-blend-mode: multiply;
+    opacity: 0.14;
+  }
+}
