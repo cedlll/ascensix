@@ -7,21 +7,21 @@ import { fadeUp, stagger, viewport } from "../lib/motion";
 const QUOTES = [
   {
     quote:
-      "They embedded a designer who understood our compliance constraints on day one. No ramp, no hand-holding — the enterprise pedigree is real.",
-    name: "VP Product",
-    org: "Series B fintech, US",
+      "They ran our paid channels and rebuilt the site behind them as one engagement. We stopped managing four vendors and started seeing results.",
+    name: "Founder",
+    org: "Growth-stage e-commerce",
   },
   {
     quote:
-      "Every AI recommendation came with a working prototype and the numbers to defend it. That ended a debate we'd been stuck in for a quarter.",
-    name: "Head of Design",
-    org: "Wealth platform, AU",
+      "Every recommendation came with something working and the numbers to defend it. That ended a debate we'd been stuck in for a quarter.",
+    name: "Head of Product",
+    org: "B2B SaaS",
   },
   {
     quote:
-      "We hired two specialists through them and brought them in to advise the same engagement. One standard across both — that's rare.",
-    name: "Director of Engineering",
-    org: "Enterprise SaaS, US",
+      "Senior people did the actual work — no account managers, no juniors learning on us. The AI showed up in the output, not the sales deck.",
+    name: "Director of Operations",
+    org: "Mid-market services firm",
   },
 ];
 

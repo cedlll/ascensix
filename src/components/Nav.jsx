@@ -26,7 +26,7 @@ export default function Nav() {
       initial={{ y: -16, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
-      className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
+      className={`transition-colors duration-300 ${
         scrolled || open
           ? "border-b border-line bg-paper/85 backdrop-blur-sm"
           : "border-b border-transparent bg-transparent"

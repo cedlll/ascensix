@@ -7,42 +7,42 @@ import { fadeUp, stagger, viewport } from "../lib/motion";
 // PLACEHOLDER images — replace with owned or cleared photography before launch.
 const CASES = [
   {
-    tag: "Enterprise software",
-    title: "One coded design system across eleven product teams",
-    body: "Eleven pattern libraries consolidated into a single coded system the teams now run themselves.",
-    image:
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
-    alt: "Open-plan enterprise office with teams collaborating",
-    stats: [
-      { value: "11", label: "teams on one system" },
-      { value: "38%", label: "faster UI delivery" },
-      { value: "62%", label: "fewer design defects" },
-    ],
-  },
-  {
-    tag: "Wealth platform",
-    title: "Member self-service that moved retirement journeys online",
-    body: "Member research and flow redesign moved core journeys online, with a paper trail risk teams accept.",
+    tag: "Performance marketing",
+    title: "Ad spend rebuilt around what actually converts",
+    body: "A full-funnel restructure and a weekly creative-testing loop turned flat spend into a compounding channel.",
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop",
-    alt: "Analyst reviewing financial data on screen",
+    alt: "Marketer reviewing campaign performance dashboards",
     stats: [
-      { value: "+24%", label: "digital task completion" },
-      { value: "-41%", label: "call volume on those flows" },
-      { value: "10 wks", label: "research to shipped" },
+      { value: "3.2×", label: "return on ad spend" },
+      { value: "-34%", label: "cost per acquisition" },
+      { value: "6 wks", label: "to first lift" },
     ],
   },
   {
-    tag: "Fintech",
-    title: "KYC onboarding without the drop-off",
-    body: "Seven coded onboarding variants tested against real upload behavior before engineering committed to one.",
+    tag: "Software development",
+    title: "A product rebuilt and shipped in a single quarter",
+    body: "Scoping to production in twelve weeks, with AI-assisted development compressing the build without cutting corners.",
+    image:
+      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
+    alt: "Product team collaborating during a build",
+    stats: [
+      { value: "12 wks", label: "scope to launch" },
+      { value: "+38%", label: "faster delivery" },
+      { value: "0", label: "critical defects at release" },
+    ],
+  },
+  {
+    tag: "UX design",
+    title: "Onboarding redesigned to stop the drop-off",
+    body: "Seven coded onboarding variants tested against real behavior before engineering committed to one.",
     image:
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
-    alt: "Person completing a secure sign-up on a phone",
+    alt: "Person completing a sign-up on a phone",
     stats: [
       { value: "+31%", label: "completion at launch" },
       { value: "7 in 9", label: "variants tested in days" },
-      { value: "0", label: "compliance findings" },
+      { value: "-41%", label: "support tickets" },
     ],
   },
 ];

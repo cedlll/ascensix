@@ -4,28 +4,28 @@ import { fadeUp, stagger, viewport } from "../lib/motion";
 
 const PILLARS = [
   {
-    value: "10",
-    unit: "yrs",
-    title: "Trained where mistakes cost millions",
-    body: "Enterprise platforms, regulated fintech, and high-stakes finance.",
+    value: "1",
+    unit: "standard",
+    title: "Caliber of work, not size of client",
+    body: "World-class thinking applied the same way for a growing SME as for an enterprise.",
   },
   {
-    value: "100",
-    unit: "%",
-    title: "Advice arrives as a working prototype",
-    body: "If we can't demo it running, we don't recommend it.",
+    value: "5",
+    unit: "+ disciplines",
+    title: "Everything under one engagement",
+    body: "Marketing, software, design, staffing — coordinated as one team, not stitched together from separate vendors.",
   },
   {
-    value: "GMT",
-    unit: "+8",
-    title: "Manila is the advantage, not the discount",
-    body: "Live US-afternoon overlap. Senior people, roughly half US rates.",
+    value: "0",
+    unit: "hype",
+    title: "Applied AI, not AI theater",
+    body: "AI is embedded in how each discipline is delivered. It shows up in the output, not the pitch.",
   },
   {
-    value: "3",
-    unit: "max",
-    title: "Concurrent engagements, capped",
-    body: "A principal in every session. No handoff layers.",
+    value: "1:1",
+    unit: "senior",
+    title: "Senior people on the work",
+    body: "Direct access to the people doing it — no handoff layers, no juniors learning on your account.",
   },
 ];
 
@@ -36,8 +36,8 @@ export default function Positioning() {
         <SectionIntro
           no="01"
           label="Why Ascensix"
-          title="An AI-powered business consultancy, on purpose."
-          kicker="Business decisions and AI decisions are now the same decision. We make both in one room."
+          title="One consultancy. Every discipline. AI in the work itself."
+          kicker="We bring world-class thinking to each discipline and apply AI where it changes the result — coordinated under one engagement, whatever your stage."
         />
 
         <motion.div

@@ -7,43 +7,43 @@ import { fadeUp, stagger, viewport } from "../lib/motion";
 const PRINCIPALS = [
   {
     name: "Cedric Lee",
-    role: "Design",
-    bio: "Product design on enterprise platforms; enterprise UX before that.",
+    role: "Strategy",
+    bio: "Sets engagement scope and keeps the work tied to business outcomes.",
     photo:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
   },
   {
     name: "Marielle Santos",
-    role: "Research",
-    bio: "Member research for regulated, high-stakes financial platforms.",
+    role: "Marketing",
+    bio: "Brand and performance marketing for companies from first traction to scale.",
     photo:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
   },
   {
     name: "Paolo Reyes",
-    role: "AI Advisory",
-    bio: "Fintech engineer turned advisor. Builds the prototype behind every call.",
+    role: "AI",
+    bio: "Engineer turned advisor. Builds AI into how each discipline delivers.",
     photo:
       "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop",
   },
   {
     name: "David Okonkwo",
-    role: "Strategy",
-    bio: "Management consulting background. Leads scoping and the executive conversation.",
+    role: "Software",
+    bio: "Ships production software and leads technical scoping and build.",
     photo:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
   },
   {
     name: "Hana Kim",
     role: "Delivery",
-    bio: "Ran enterprise delivery programs. Keeps engagements on scope and on date.",
+    bio: "Keeps every engagement on scope and on date, across disciplines.",
     photo:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop",
   },
   {
     name: "Miguel Torres",
-    role: "Engineering",
-    bio: "Design systems and frontend engineering across regulated products.",
+    role: "Design",
+    bio: "Product and UX design, from research through shipped interface.",
     photo:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop",
   },
@@ -57,7 +57,7 @@ export default function Team() {
           no="05"
           label="Founders"
           title="Six founders. One standard."
-          kicker="Principals only, no handoffs — six of us kept the enterprise standard and dropped the pyramid."
+          kicker="Principals only, no handoffs — six founders who do the work themselves and hold it to one standard."
         />
 
         <motion.ul

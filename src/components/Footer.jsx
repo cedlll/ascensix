@@ -26,7 +26,7 @@ export default function Footer() {
         </nav>
 
         <p className="text-sm text-ink-400">
-          © {new Date().getFullYear()} · Manila
+          © {new Date().getFullYear()} Ascensix
         </p>
       </div>
     </footer>

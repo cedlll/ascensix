@@ -1,26 +1,27 @@
 import { motion } from "framer-motion";
 import AscentLine from "./AscentLine";
 import { EASE, fadeUp, lineReveal, stagger } from "../lib/motion";
+import heroImage from "../assets/pawel-chu-ULh0i2txBCY-unsplash.jpg";
 
 const HEADLINE = [
-  <>Enterprise rigor.</>,
-  <>Applied AI.</>,
+  <>World-class business</>,
+  <>consulting, powered by AI.</>,
   <>
-    Delivered like a{" "}
-    <em className="font-display font-medium text-accent italic">boutique</em>.
+    For companies at{" "}
+    <em className="font-display font-medium text-accent italic">every stage</em>.
   </>,
 ];
 
 // Results shown as visuals, seated over the hero image — proof at a glance.
 const PROOF = [
   { value: "+38%", label: "faster delivery" },
-  { value: "11", label: "teams unified" },
-  { value: "-41%", label: "call volume" },
+  { value: "3.2×", label: "pipeline growth" },
+  { value: "-41%", label: "cost to serve" },
 ];
 
 export default function Hero() {
   return (
-    <section id="top" aria-label="Introduction" className="pt-32 md:pt-40">
+    <section id="top" aria-label="Introduction" className="pt-40 md:pt-48">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <motion.div
           variants={stagger(0.12, 0.15)}
@@ -28,7 +29,7 @@ export default function Hero() {
           animate="visible"
         >
           <motion.p variants={fadeUp} className="label-mono text-ink-600">
-            An AI-powered business consultancy — Manila, for clients worldwide
+            One consultancy for the disciplines you'd otherwise hire separately
           </motion.p>
 
           <div className="mt-8">
@@ -76,12 +77,11 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: EASE, delay: 0.55 }}
           className="duotone relative mt-12 rounded-lg border border-line md:mt-16"
         >
-          {/* PLACEHOLDER — replace with owned photography before launch */}
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop"
-            alt="Glass facade of a corporate tower rising toward the sky"
+            src={heroImage}
+            alt="Empty glass-walled conference room with a long table and chairs"
             width="2000"
-            height="1000"
+            height="1500"
             className="aspect-[16/11] w-full object-cover sm:aspect-[2/1]"
           />
           <div className="absolute inset-x-5 bottom-5 z-[2] md:inset-x-8 md:bottom-8">

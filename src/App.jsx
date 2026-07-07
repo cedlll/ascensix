@@ -1,4 +1,5 @@
 import { MotionConfig } from "framer-motion";
+import WipBanner from "./components/WipBanner";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import TrustBand from "./components/TrustBand";
@@ -14,7 +15,10 @@ export default function App() {
   return (
     <MotionConfig reducedMotion="user">
       <div>
-        <Nav />
+        <div className="fixed inset-x-0 top-0 z-40">
+          <WipBanner />
+          <Nav />
+        </div>
         <main>
           <Hero />
           <TrustBand />

@@ -33,7 +33,7 @@ export default function Contact() {
             variants={fadeUp}
             className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-600"
           >
-            Thirty minutes with a principal. Bring your actual product — leave
+            Thirty minutes with a principal. Bring your actual challenge — leave
             with three concrete observations, either way.
           </motion.p>
 
@@ -59,8 +59,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.p variants={fadeUp} className="label-mono mt-12 text-ink-400">
-            Manila · GMT+8 — live overlap with US afternoons · replies within
-            one business day
+            No obligation · no pitch deck · replies within one business day
           </motion.p>
         </motion.div>
       </div>

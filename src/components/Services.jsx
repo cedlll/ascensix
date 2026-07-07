@@ -2,49 +2,67 @@ import { motion } from "framer-motion";
 import SectionIntro from "./SectionIntro";
 import { fadeUp, stagger, viewport } from "../lib/motion";
 
+// One entry per discipline. Add a service line by appending an object here —
+// the section renders any number without changes to the layout below.
 const SERVICES = [
   {
     no: "S.01",
-    title: "Design systems",
-    outcome: "A component system your engineers actually adopt.",
+    title: "Digital marketing",
+    outcome: "A brand that shows up sharp and consistent everywhere it matters.",
+    ai: "AI drafts, variants, and audience research compress the production cycle.",
     deliverables: [
-      "Token architecture and naming standard",
-      "Coded component library with Figma parity",
-      "Contribution and governance model",
-      "Adoption metrics and rollout plan",
+      "Positioning and messaging system",
+      "Content and campaign calendar",
+      "Strategy across owned and earned channels",
+      "Reporting tied to pipeline, not vanity metrics",
     ],
   },
   {
     no: "S.02",
-    title: "AI-assisted prototyping",
-    outcome: "Working software in days, not decks in weeks.",
+    title: "Performance marketing",
+    outcome: "Spend that compounds — every channel measured to the dollar.",
+    ai: "AI runs creative and bid experiments at a pace a manual team can't match.",
     deliverables: [
-      "Coded prototypes, not clickthroughs",
-      "Model and tooling feasibility memo",
-      "Cost and latency estimates per variant",
-      "Handoff-ready repository",
+      "Full-funnel paid strategy and setup",
+      "Creative testing framework",
+      "Landing pages built to convert",
+      "Attribution and spend dashboards",
     ],
   },
   {
     no: "S.03",
-    title: "UX research & consulting",
-    outcome: "Evidence strong enough to end the internal debate.",
+    title: "Software development",
+    outcome: "Working software shipped on a timeline you can plan around.",
+    ai: "AI-assisted development turns weeks of scaffolding into days.",
     deliverables: [
-      "Study design and participant recruiting",
-      "Moderated sessions with recordings",
-      "Synthesis mapped to product metrics",
-      "Prioritized decision memo",
+      "Product and technical scoping",
+      "Coded prototypes, not clickthroughs",
+      "Production build and release",
+      "Documented, handoff-ready codebase",
     ],
   },
   {
     no: "S.04",
-    title: "AI training & workshops",
-    outcome: "Your team shipping with AI tools in weeks, policy included.",
+    title: "UX design",
+    outcome: "Interfaces users move through without friction — backed by evidence.",
+    ai: "AI accelerates research synthesis and prototyping so decisions land faster.",
     deliverables: [
-      "Hands-on curriculum on your real backlog",
-      "Tool selection and usage policy",
-      "Before-and-after skill assessment",
-      "30-day follow-up support",
+      "Research and usability testing",
+      "Flows, wireframes, and prototypes",
+      "Design system and component library",
+      "Decision memos mapped to product metrics",
+    ],
+  },
+  {
+    no: "S.05",
+    title: "Virtual assistant staffing",
+    outcome: "Vetted support that lifts recurring work off your team.",
+    ai: "AI copilots and workflows raise the output of every assistant.",
+    deliverables: [
+      "Role scoping and candidate vetting",
+      "Onboarding into your tools and process",
+      "Ongoing management and quality checks",
+      "Coverage that scales with demand",
     ],
   },
 ];
@@ -58,8 +76,8 @@ export default function Services() {
             <SectionIntro
               no="02"
               label="Services"
-              title="Four things, done to an enterprise standard."
-              kicker="Every engagement ends in an artifact you can hold, run, or measure."
+              title="The disciplines we deliver — under one engagement."
+              kicker="Every engagement ends in outcomes you can measure. The set grows as our clients' needs do."
             />
           </div>
 
@@ -79,7 +97,7 @@ export default function Services() {
                 <span className="h-2 w-2 rounded-full bg-line" />
                 <span className="h-2 w-2 rounded-full bg-line" />
                 <span className="label-mono ml-3 text-ink-400">
-                  S.02 / coded-prototype
+                  engagement / one team
                 </span>
               </div>
               <div className="space-y-4 p-6">
@@ -101,10 +119,10 @@ export default function Services() {
             {/* blueprint-style annotation tags — masks match the raised
                 card's surface, not the ground (docs/BRAND-SYSTEM.md §2.6.4) */}
             <p className="label-mono absolute -top-2.5 right-6 bg-paper px-2 text-accent">
-              A.1 — tokens
+              A.1 — scope
             </p>
             <p className="label-mono absolute -bottom-2.5 left-6 bg-paper px-2 text-accent">
-              A.2 — variant
+              A.2 — outcome
             </p>
           </motion.div>
         </div>
@@ -132,6 +150,12 @@ export default function Services() {
                 <p className="mt-3 max-w-md leading-relaxed text-ink-600">
                   {s.outcome}
                 </p>
+                {s.ai && (
+                  <p className="mt-4 flex max-w-md gap-2.5 text-sm leading-relaxed text-ink-500">
+                    <span className="label-mono shrink-0 text-accent">AI</span>
+                    {s.ai}
+                  </p>
+                )}
               </div>
               <div className="md:col-span-5">
                 <p className="label-mono text-ink-400">What you get</p>

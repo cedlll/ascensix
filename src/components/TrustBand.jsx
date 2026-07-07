@@ -58,7 +58,7 @@ export default function TrustBand() {
           variants={fadeUp}
           className="label-mono mb-10 text-center text-ink-400"
         >
-          Trusted where mistakes are expensive
+          Trusted by teams across industries and stages of growth
         </motion.p>
 
         <motion.ul
