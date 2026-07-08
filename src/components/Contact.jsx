@@ -51,10 +51,10 @@ export default function Contact() {
               Book a 30-minute session
             </motion.a>
             <a
-              href="mailto:hello@ascensix.com?subject=Working%20session"
+              href="mailto:ascensix@gmail.com?subject=Working%20session"
               className="px-2 py-4 text-sm font-medium text-ink-800 underline decoration-line underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
             >
-              or write to hello@ascensix.com
+              or write to ascensix@gmail.com
             </a>
           </motion.div>
 

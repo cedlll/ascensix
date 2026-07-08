@@ -16,9 +16,9 @@ export default function Hero() {
     <section
       id="top"
       aria-label="Introduction"
-      className="relative overflow-hidden pt-40 pb-20 md:pt-48 md:pb-28"
+      className="relative overflow-hidden pt-40 pb-44 md:pt-48 md:pb-72"
     >
-      <div className="relative mx-auto max-w-6xl px-6 md:px-10">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-10">
         <motion.div
           variants={stagger(0.12, 0.15)}
           initial="hidden"
@@ -64,15 +64,36 @@ export default function Hero() {
             </a>
           </motion.div>
         </motion.div>
+      </div>
 
-        {/* Quiet climb, closing the hero: the brand's one motif spans the
-            width of the content column in the whitespace below the CTAs,
-            low enough in contrast to read as texture, not a second focal
-            point (docs/BRAND-SYSTEM.md §5.5). Absolutely positioned so it
-            never affects document flow or the sections below. */}
+      {/* The ascent, at full scale: the brand's one motif as an actual hero
+          visual rather than a margin accent — a large gold line climbing
+          through a dedicated band below the copy, full-bleed to the
+          viewport edge, closing on a soft glint. Confined to its own fixed
+          band beneath the content (never overlapping the headline/CTAs)
+          and absolutely positioned so it never affects layout/flow. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-40 md:h-64"
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: EASE, delay: 1.9 }}
+          className="absolute top-0 right-0 h-32 w-32 -translate-y-1/3 translate-x-1/4 rounded-full bg-accent/[0.18] blur-[70px] md:h-48 md:w-48 md:blur-[100px]"
+        />
         <AscentLine
+          gradient
           delay={0.9}
-          className="pointer-events-none absolute inset-x-0 top-[calc(100%+1rem)] h-14 w-full opacity-[0.55] md:top-[calc(100%+1.5rem)] md:h-20"
+          strokeWidth={2}
+          className="absolute inset-0 h-full w-full opacity-[0.6]"
+        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.4 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: EASE, delay: 2.3 }}
+          style={{ boxShadow: "0 0 20px 5px rgba(212, 168, 75, 0.55)" }}
+          className="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-accent-soft"
         />
       </div>
     </section>
