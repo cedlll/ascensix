@@ -7,7 +7,7 @@ const PILLARS = [
     value: "1",
     unit: "standard",
     title: "Caliber of work, not size of client",
-    body: "World-class thinking applied the same way for a growing SME as for an enterprise.",
+    body: "Same caliber of work whether you're a growing SME or an enterprise.",
   },
   {
     value: "5",
@@ -22,10 +22,10 @@ const PILLARS = [
     body: "AI is embedded in how each discipline is delivered. It shows up in the output, not the pitch.",
   },
   {
-    value: "1:1",
+    value: "100%",
     unit: "senior",
-    title: "Senior people on the work",
-    body: "Direct access to the people doing it — no handoff layers, no juniors learning on your account.",
+    title: "All senior, all the time",
+    body: "Every hour on your account is senior time — no juniors learning on your dime.",
   },
 ];
 
@@ -36,8 +36,8 @@ export default function Positioning() {
         <SectionIntro
           no="01"
           label="Why Ascensix"
-          title="One consultancy. Every discipline. AI in the work itself."
-          kicker="We bring world-class thinking to each discipline and apply AI where it changes the result — coordinated under one engagement, whatever your stage."
+          title="One consultancy. Every discipline. AI in the output, not the overhead."
+          kicker="Senior specialists in every discipline, backed by AI that actually changes the outcome — coordinated under one engagement, at whatever stage you're at."
         />
 
         <motion.div

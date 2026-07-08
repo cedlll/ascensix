@@ -59,7 +59,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.p variants={fadeUp} className="label-mono mt-12 text-ink-400">
-            No obligation · no pitch deck · replies within one business day
+            No obligation · no fluff · replies within one business day
           </motion.p>
         </motion.div>
       </div>

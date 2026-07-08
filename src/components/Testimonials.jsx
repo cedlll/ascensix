@@ -7,20 +7,20 @@ import { fadeUp, stagger, viewport } from "../lib/motion";
 const QUOTES = [
   {
     quote:
-      "They ran our paid channels and rebuilt the site behind them as one engagement. We stopped managing four vendors and started seeing results.",
-    name: "Founder",
-    org: "Growth-stage e-commerce",
+      "They ran our paid and organic channels as one coordinated push instead of three disconnected vendors. That's the difference between reporting and results.",
+    name: "CEO",
+    org: "Consumer retail brand",
   },
   {
     quote:
-      "Every recommendation came with something working and the numbers to defend it. That ended a debate we'd been stuck in for a quarter.",
-    name: "Head of Product",
+      "Every recommendation came with a working test and the numbers to defend it. We stopped debating which creative worked and started shipping what did.",
+    name: "Head of Marketing",
     org: "B2B SaaS",
   },
   {
     quote:
-      "Senior people did the actual work — no account managers, no juniors learning on us. The AI showed up in the output, not the sales deck.",
-    name: "Director of Operations",
+      "Pipeline reporting finally tied to closed revenue, not vanity metrics. Reps trusted the leads coming in for the first time in years.",
+    name: "Head of Sales",
     org: "Mid-market services firm",
   },
 ];

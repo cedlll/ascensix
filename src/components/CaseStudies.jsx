@@ -7,25 +7,30 @@ import { fadeUp, stagger, viewport } from "../lib/motion";
 // PLACEHOLDER images — replace with owned or cleared photography before launch.
 const CASES = [
   {
-    tag: "Performance marketing",
-    title: "Ad spend rebuilt around what actually converts",
-    body: "A full-funnel restructure and a weekly creative-testing loop turned flat spend into a compounding channel.",
+    client: "Consumer retail brand",
+    tag: "Social media marketing",
+    title: "A 12-month content push that outgrew its own reach",
+    body: "Facebook and Instagram presence lifted across visibility, engagement, and traffic over roughly twelve months, with activity spiking around July–August and again in late October. Link clicks outpaced raw reach growth on both platforms — a sign of strong creative and CTA performance, not just wider distribution.",
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop",
-    alt: "Marketer reviewing campaign performance dashboards",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+    alt: "Laptop screen showing a marketing analytics dashboard with traffic and engagement graphs",
     stats: [
-      { value: "3.2×", label: "return on ad spend" },
-      { value: "-34%", label: "cost per acquisition" },
-      { value: "6 wks", label: "to first lift" },
+      { value: "27.0M", label: "Facebook views (12 mo)" },
+      { value: "+604%", label: "Facebook link clicks" },
+      { value: "+220%", label: "Facebook page visits" },
+      { value: "923.4K", label: "Instagram reach" },
+      { value: "+8.4K%", label: "Instagram link clicks" },
+      { value: "+278%", label: "Instagram profile visits" },
     ],
   },
   {
+    client: "B2B SaaS company",
     tag: "Software development",
     title: "A product rebuilt and shipped in a single quarter",
     body: "Scoping to production in twelve weeks, with AI-assisted development compressing the build without cutting corners.",
     image:
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
-    alt: "Product team collaborating during a build",
+      "https://images.unsplash.com/photo-1754039984985-ef607d80113a?q=80&w=1600&auto=format&fit=crop",
+    alt: "Close-up of application source code on a monitor in a dev workspace",
     stats: [
       { value: "12 wks", label: "scope to launch" },
       { value: "+38%", label: "faster delivery" },
@@ -33,12 +38,13 @@ const CASES = [
     ],
   },
   {
+    client: "Consumer mobile app",
     tag: "UX design",
     title: "Onboarding redesigned to stop the drop-off",
     body: "Seven coded onboarding variants tested against real behavior before engineering committed to one.",
     image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop",
-    alt: "Person completing a sign-up on a phone",
+      "https://images.unsplash.com/photo-1602576666092-bf6447a729fc?q=80&w=1600&auto=format&fit=crop",
+    alt: "Laptop screen showing a UI component and icon kit used for onboarding screens",
     stats: [
       { value: "+31%", label: "completion at launch" },
       { value: "7 in 9", label: "variants tested in days" },
@@ -96,7 +102,8 @@ export default function CaseStudies() {
                 {/* Content */}
                 <div className="flex flex-col justify-center gap-6 p-8 lg:col-span-7 md:p-12">
                   <div>
-                    <p className="label-mono text-accent-soft">{c.tag}</p>
+                    <p className="label-mono text-ink-400">{c.client}</p>
+                    <p className="label-mono mt-1 text-accent-soft">{c.tag}</p>
                     <h3 className="mt-4 font-display text-2xl leading-snug font-medium tracking-tight text-ink-950 md:text-3xl">
                       {c.title}
                     </h3>

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import AscentLine from "./AscentLine";
 import { EASE, fadeUp, lineReveal, stagger } from "../lib/motion";
-import heroImage from "../assets/pawel-chu-ULh0i2txBCY-unsplash.jpg";
+import AscentLine from "./AscentLine";
 
 const HEADLINE = [
   <>World-class business</>,
@@ -12,17 +11,14 @@ const HEADLINE = [
   </>,
 ];
 
-// Results shown as visuals, seated over the hero image — proof at a glance.
-const PROOF = [
-  { value: "+38%", label: "faster delivery" },
-  { value: "3.2×", label: "pipeline growth" },
-  { value: "-41%", label: "cost to serve" },
-];
-
 export default function Hero() {
   return (
-    <section id="top" aria-label="Introduction" className="pt-40 md:pt-48">
-      <div className="mx-auto max-w-6xl px-6 md:px-10">
+    <section
+      id="top"
+      aria-label="Introduction"
+      className="relative overflow-hidden pt-40 pb-20 md:pt-48 md:pb-28"
+    >
+      <div className="relative mx-auto max-w-6xl px-6 md:px-10">
         <motion.div
           variants={stagger(0.12, 0.15)}
           initial="hidden"
@@ -69,46 +65,15 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Image-led stage: one quiet architectural photograph carrying the
-            ascent-line motif, with results seated over it as visual proof. */}
-        <motion.figure
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: EASE, delay: 0.55 }}
-          className="duotone relative mt-12 rounded-lg border border-line md:mt-16"
-        >
-          <img
-            src={heroImage}
-            alt="Empty glass-walled conference room with a long table and chairs"
-            width="2000"
-            height="1500"
-            className="aspect-[16/11] w-full object-cover sm:aspect-[2/1]"
-          />
-          <div className="absolute inset-x-5 bottom-5 z-[2] md:inset-x-8 md:bottom-8">
-            <AscentLine className="h-14 w-full md:h-20" delay={0.8} />
-          </div>
-
-          {/* Result chips — visual proof, top of the frame */}
-          <motion.ul
-            variants={stagger(0.1, 1)}
-            initial="hidden"
-            animate="visible"
-            className="absolute inset-x-5 top-5 z-[2] flex flex-wrap gap-2.5 md:inset-x-8 md:top-8"
-          >
-            {PROOF.map((p) => (
-              <motion.li
-                key={p.label}
-                variants={fadeUp}
-                className="rounded-full border border-white/25 bg-ink-950/45 px-4 py-2 backdrop-blur-md"
-              >
-                <span className="font-display text-base font-medium tracking-tight text-white">
-                  {p.value}
-                </span>
-                <span className="label-mono ml-2 text-white/70">{p.label}</span>
-              </motion.li>
-            ))}
-          </motion.ul>
-        </motion.figure>
+        {/* Quiet climb, closing the hero: the brand's one motif spans the
+            width of the content column in the whitespace below the CTAs,
+            low enough in contrast to read as texture, not a second focal
+            point (docs/BRAND-SYSTEM.md §5.5). Absolutely positioned so it
+            never affects document flow or the sections below. */}
+        <AscentLine
+          delay={0.9}
+          className="pointer-events-none absolute inset-x-0 top-[calc(100%+1rem)] h-14 w-full opacity-[0.55] md:top-[calc(100%+1.5rem)] md:h-20"
+        />
       </div>
     </section>
   );

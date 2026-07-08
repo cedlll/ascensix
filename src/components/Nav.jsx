@@ -7,7 +7,6 @@ const LINKS = [
   { href: "#why", label: "Why Ascensix" },
   { href: "#services", label: "Services" },
   { href: "#work", label: "Work" },
-  { href: "#team", label: "Team" },
 ];
 
 export default function Nav() {

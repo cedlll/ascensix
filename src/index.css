@@ -41,6 +41,21 @@
       fixed var(--color-paper);
   }
 
+  /* Film-grain texture on the paper ground — a static, non-animated noise
+     field (fixed seed, no feTurbulence animation) at ~3.5% opacity. Reads
+     as tactile printed-paper texture, not a visible filter. Global on body
+     so it sits under the hero and every section on the same warm ground. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.035;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch' seed='7'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
   ::selection {
     background: var(--color-accent);
     color: #ffffff;

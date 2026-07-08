@@ -7,7 +7,6 @@ import Positioning from "./components/Positioning";
 import Services from "./components/Services";
 import CaseStudies from "./components/CaseStudies";
 import Testimonials from "./components/Testimonials";
-import Team from "./components/Team";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -26,7 +25,6 @@ export default function App() {
           <Services />
           <CaseStudies />
           <Testimonials />
-          <Team />
           <Contact />
         </main>
         <Footer />
