@@ -7,19 +7,7 @@ import { fadeUp, stagger, viewport } from "../lib/motion";
 const SERVICES = [
   {
     no: "S.01",
-    title: "Digital marketing",
-    outcome: "A brand that shows up sharp and consistent everywhere it matters.",
-    ai: "AI drafts, variants, and audience research compress the production cycle.",
-    deliverables: [
-      "Positioning and messaging system",
-      "Content and campaign calendar",
-      "Strategy across owned and earned channels",
-      "Reporting tied to pipeline, not vanity metrics",
-    ],
-  },
-  {
-    no: "S.02",
-    title: "Performance marketing",
+    title: "Digital and Performance marketing",
     outcome: "Spend that compounds — every channel measured to the dollar.",
     ai: "AI runs creative and bid experiments at a pace a manual team can't match.",
     deliverables: [
@@ -30,8 +18,8 @@ const SERVICES = [
     ],
   },
   {
-    no: "S.03",
-    title: "Software development",
+    no: "S.02",
+    title: "AI and Software development",
     outcome: "Working software shipped on a timeline you can plan around.",
     ai: "AI-assisted development turns weeks of scaffolding into days.",
     deliverables: [
@@ -42,8 +30,8 @@ const SERVICES = [
     ],
   },
   {
-    no: "S.04",
-    title: "UX design",
+    no: "S.03",
+    title: "UI/UX design",
     outcome: "Interfaces users move through without friction — backed by evidence.",
     ai: "AI accelerates research synthesis and prototyping so decisions land faster.",
     deliverables: [
@@ -54,7 +42,7 @@ const SERVICES = [
     ],
   },
   {
-    no: "S.05",
+    no: "S.04",
     title: "Virtual assistant staffing",
     outcome: "Vetted support that lifts recurring work off your team.",
     ai: "AI copilots and workflows raise the output of every assistant.",

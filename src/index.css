@@ -104,7 +104,7 @@
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
   }
 
-  /* Gold primary CTA — hero + close only. Gradient fill, dark legend. */
+  /* Gold primary CTA. Gradient fill, dark legend. */
   .btn-primary {
     background: linear-gradient(160deg, #e9ce93 0%, #d4a84b 55%, #b58a2e 100%);
     color: #14141a;

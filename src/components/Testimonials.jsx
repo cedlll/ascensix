@@ -33,7 +33,6 @@ export default function Testimonials() {
           no="04"
           label="In their words"
           title="What partners say."
-          kicker="A representative sample of the response to our work."
         />
 
         <motion.ul
@@ -63,17 +62,6 @@ export default function Testimonials() {
             </motion.li>
           ))}
         </motion.ul>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={viewport}
-          transition={{ duration: 0.7 }}
-          className="mt-10 max-w-2xl text-sm leading-relaxed text-ink-400"
-        >
-          Sample quotes shown to illustrate format. Attributed testimonials are
-          added with each client&rsquo;s written permission.
-        </motion.p>
       </div>
     </section>
   );

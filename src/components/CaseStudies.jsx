@@ -65,7 +65,6 @@ export default function CaseStudies() {
           no="03"
           label="Selected work"
           title="Who we've helped — and the results."
-          kicker="Anonymized under NDA. The pictures are placeholders; the numbers are the ones we were measured on."
         />
 
         <motion.div

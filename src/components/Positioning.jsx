@@ -21,12 +21,6 @@ const PILLARS = [
     title: "Applied AI, not AI theater",
     body: "AI is embedded in how each discipline is delivered. It shows up in the output, not the pitch.",
   },
-  {
-    value: "100%",
-    unit: "senior",
-    title: "All senior, all the time",
-    body: "Every hour on your account is senior time — no juniors learning on your dime.",
-  },
 ];
 
 export default function Positioning() {
@@ -45,7 +39,7 @@ export default function Positioning() {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="mt-16 grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2"
+          className="mt-16 grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-3"
         >
           {PILLARS.map((p) => (
             <motion.article
